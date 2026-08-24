@@ -1,3 +1,6 @@
+from fastapi import FastAPI, BackgroundTasks ...
+"status": "Vize Radar V6 Canlı ✅ - OTOMATİK TELEGRAM BİLDİRİMLİ",
+"version": "6.0.0",
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import os
