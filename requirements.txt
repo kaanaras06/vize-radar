@@ -4,3 +4,7 @@ httpx==0.26.0
 apscheduler==3.10.4
 python-dotenv==1.0.0
 python-multipart==0.0.6
+fastapi
+uvicorn
+httpx
+pydantic
