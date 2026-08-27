@@ -92,7 +92,7 @@ async def send_telegram_notification(appointment):
 {appointment['url']}
 
 ⏰ {datetime.now().strftime('%d.%m.%Y %H:%M:%S')}
-🤖 Vize Radar V6 - Otomatik Bildirim
+🤖 Vize Radar V6.1 - Otomatik Bildirim
 🔗 https://vize-radar-production-3237.up.railway.app
 """
 
@@ -165,7 +165,7 @@ async def background_monitor():
     """Arka planda 7/24 çalışan monitor"""
     global MONITORING_ACTIVE
     MONITORING_ACTIVE = True
-    print(f"🔄 Vize Radar V6 Monitor Başladı - {datetime.now()}")
+    print(f"🔄 Vize Radar V6.1 Monitor Başladı - {datetime.now()}")
     
     while MONITORING_ACTIVE:
         try:
@@ -185,15 +185,15 @@ async def lifespan(app: FastAPI):
     APPOINTMENTS = generate_appointments()
     # Background task başlat
     asyncio.create_task(background_monitor())
-    print("🚀 Vize Radar V6 - Telegram Otomatik Bildirim Aktif!")
+    print("🚀 Vize Radar V6.1 - Telegram Otomatik Bildirim Aktif!")
     yield
     # Shutdown
     global MONITORING_ACTIVE
     MONITORING_ACTIVE = False
 
 app = FastAPI(
-    title="Vize Radar V6 - Otomatik Telegram Bildirimli",
-    version="6.0.0",
+    title="Vize Radar V6.1 - Otomatik Telegram Bildirimli",
+    version="6.1.0",
     description="20 Ülke - Randevu açılınca anında Telegram - 7/24",
     lifespan=lifespan
 )
@@ -281,7 +281,7 @@ def get_appointments(country: str = None, status: str = None):
         "last_check": LAST_CHECK,
         "monitoring": MONITORING_ACTIVE,
         "appointments": filtered,
-        "source": "V6 - Otomatik Telegram Bildirimli",
+        "source": "V6.1 - Otomatik Telegram Bildirimli",
         "countries": list(OFFICIAL_LINKS_2026.keys())
     }
 
@@ -299,7 +299,7 @@ async def test_telegram():
     
     countries_text = ", ".join([f"{k}({v['country']})" for k, v in list(OFFICIAL_LINKS_2026.items())[:5]])
     
-    text = f"""✅ Vize Radar V6 Test - {datetime.now().strftime('%d.%m.%Y %H:%M')}
+    text = f"""✅ Vize Radar V6.1 Test - {datetime.now().strftime('%d.%m.%Y %H:%M')}
 
 🚨 Bot Aktif Kaan! OTOMATİK BİLDİRİM AÇIK
 
