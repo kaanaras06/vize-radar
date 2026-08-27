@@ -210,8 +210,8 @@ app.add_middleware(
 def root():
     musait = [a for a in APPOINTMENTS if a["status"] == "MUSAIT"]
     return {
-        "status": "Vize Radar V6 Canlı ✅ - OTOMATİK TELEGRAM BİLDİRİMLİ",
-        "version": "6.0.0",
+        "status": "Vize Radar V6.1 Canlı ✅ - OTOMATİK TELEGRAM BİLDİRİMLİ",
+        "version": "6.1.0",
         "feature": "Randevu açılınca anında Telegram!",
         "total_countries": len(OFFICIAL_LINKS_2026),
         "total_appointments": len(APPOINTMENTS),
@@ -363,7 +363,7 @@ def get_musait_only():
         "last_check": LAST_CHECK
     }
 
-@app.post("/api/trigger-test-appointment")
+@app.api_route("/api/trigger-test-appointment", methods=["GET", "POST"])
 async def trigger_test_appointment():
     """Test için sahte bir müsait randevu oluştur ve Telegram bildirimi gönder"""
     test_app = {
