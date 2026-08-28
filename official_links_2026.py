@@ -1,9 +1,8 @@
 """
-Vize Radar V6.1 - 2026 Resmi Linkler - TÜM ÜLKELER - OTOMATİK TELEGRAM BİLDİRİMLİ
-Tek yetkili kaynaklar - 2026 güncel - 20 ülke
-Kaynaklar: tuerkei.diplo.de, VFS Global, TLScontact, BLS, Kosmos, US Travel Docs
-Son güncelleme: 27 Ağustos 2026 - V6.1 GET+POST Fix
-Versiyon: 6.1.0 - Canlı: https://vize-radar-production-3237.up.railway.app
+Vize Radar V4 - 2026 Resmi Linkler - TÜM ÜLKELER
+Tek yetkili kaynaklar - 2026 güncel
+Kaynaklar: tuerkei.diplo.de, VFS Global, TLScontact, BLS, Kosmos
+Son güncelleme: 22 Ağustos 2026
 """
 
 OFFICIAL_LINKS_2026 = {
